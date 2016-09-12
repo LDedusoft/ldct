@@ -245,7 +245,7 @@ if(session.getAttribute("userInfo")!=null){
     data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
     closed="true"
     href="<%=basePath%>newShiTi"
-    >
+    ></div>
 	
 </body>
 </html>
