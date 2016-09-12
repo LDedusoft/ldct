@@ -30,11 +30,15 @@ body{
 }
 
 
-.head{display:block;
-	width:186px;
+.userInfoHead{
+	padding-left:5px;
+	padding-top:5px;
+	display:block;
+	width:181px;
 	height:90px;
 	border-right:1px solid #b7d5df;
 	border-bottom:1px solid #b7d5df;
 }
-.header{float:left}
-.userinfo{float:left}
+.userheader{float:left}
+.userinfo{float:left;margin-left: 5px;}
+.userlabel{display:inline;height: 23px;line-height: 23px; vertical-align:middle; };

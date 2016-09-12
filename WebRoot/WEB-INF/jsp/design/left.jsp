@@ -6,8 +6,16 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 TeacherUserInfo userInfo = new TeacherUserInfo();
+String imgName = "";
 if(session.getAttribute("userInfo")!=null){
 	 userInfo = (TeacherUserInfo)session.getAttribute("userInfo");
+	 if("管理员".equals(userInfo.getUserType())){
+		 imgName ="guanli.png";
+	 }else  if("主考".equals(userInfo.getUserType())){
+		 imgName ="zhukao.png";
+	 }else  if("监考".equals(userInfo.getUserType())){
+		 imgName ="jiankao.png";
+	 }
 }
 
 
@@ -55,22 +63,26 @@ function logout(){
 
 <body style="background:#f9f9f9;">
 	<div class="lefttop"><span></span>用户信息</div>
-    	<div class="head">
-                <div class="header">
+    	<div class="userInfoHead">
+                <div class="userheader">
                     <div id="Image1_Container" style="display:inline;">
-						<img id="Image1" src="<%=basePath%>/uimaker/images/i07.png" style="border: none; width: 56px; height: 66px;"/>
+						<img id="Image1" src="<%=basePath%>/uimaker/images/i07.png" style="border: none; width: 70px; height: 70px;"/>
 					</div>
                 </div>
                 <div class="userinfo">
-                    <ul>
+                    <ul >
                         <li>
-                            <div id="TextField1_Container" style="display:inline;"><%=userInfo.getUserName() %></div>
+                            <div id="" class="userlabel">
+                            <%=userInfo.getUserName() %></div>
                         </li>
                         <li>
-                            <div id="TextField2_Container" style="display:inline;"><%=userInfo.getTeacherName() %></div>
+                            <div id="" class="userlabel"><%=userInfo.getTeacherName() %></div>
                         </li>
-                        <li><span></span>
-                            <div id="TextField3_Container" style="display:inline;"><%=userInfo.getUserType() %></div>
+                        <li>
+                            <div id="" class="userlabel">
+                            <%=userInfo.getUserType()%>
+                            </div>
+                            
                         </li>
                     </ul>
                 </div>
