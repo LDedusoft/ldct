@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     
     <div class="toolsli">
     <ul class="toollist">
-    <li><a href="xiTongSheZhi"><img src="<%=basePath %>uimaker/images/i06.png" /></a><h2>系统设置</h2></li>
+    <li><a href="xiTongGuanLi"><img src="<%=basePath %>uimaker/images/i06.png" /></a><h2>系统设置</h2></li>
     <li><a href="#" onclick="logout()"><img src="<%=basePath %>uimaker/images/i07.png" /></a><h2>退出系统</h2></li>     
     </ul>
     </div>
