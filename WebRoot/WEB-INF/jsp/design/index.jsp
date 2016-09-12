@@ -28,7 +28,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="dlg" class="easyui-dialog" title="Basic Dialog" style="width:600px;height:400px"
 	 data-options="iconCls:'icon-save',minimizable:true" 
 	 style="width:400px;height:200px;padding:10px"
-	
 	 href="<%=basePath%>window"
 	 >
 	 

@@ -25,7 +25,9 @@ if(session.getAttribute("userInfo")!=null){
 			var toolbar = [{
 				text:'Add',
 				iconCls:'icon-add',
-				handler:function(){alert('add')}
+				handler:function(){
+					onclick=$('#newSTWindow').window('open');
+				}
 			},{
 				text:'Cut',
 				iconCls:'icon-cut',
@@ -142,10 +144,13 @@ if(session.getAttribute("userInfo")!=null){
 		function getData(){
 			var rows;	
 			$.ajax({   
-			     url:'<%=basePath%>getShiTi',   
+			     url:'<%=basePath%>searchShiTi',   
 			     type:'post',   
 			     dataType: 'json',  
-			     data:'userName=<%=userInfo.getUserName()%>',      
+			     data:{
+						userName: '<%=userInfo.getUserName()%>',
+						stType:'all' //获取下拉列表值
+					},        
 			     async : true, //异步   
 			     error:function(){   
 			        alert('error');   
@@ -164,10 +169,13 @@ if(session.getAttribute("userInfo")!=null){
 		
 		function searchBtn(){
 			$.ajax({   
-			     url:'<%=basePath%>getShiTi2',   
+			     url:'<%=basePath%>searchShiTi',   
 			     type:'post',   
 			     dataType: 'json',  
-			     data:'userName=<%=userInfo.getUserName()%>',      
+			     data:{
+						userName: '<%=userInfo.getUserName()%>',
+						stType:$("#stTypeSelect").combobox('getValue') //获取下拉列表值
+					},    
 			     async : false, //异步   
 			     error:function(){   
 			        alert('error');   
@@ -181,21 +189,29 @@ if(session.getAttribute("userInfo")!=null){
 			 });
 		}
 		
+		//重置
+		function refreshBtn(){
+			//$("#stTypeSelect").combobox('clear');
+			$("#stTypeSelect").combobox('select','all');
+			searchBtn();
+		}
+		
 	</script>	
 </head>
 <body>
 <div id="p" class="easyui-panel style-panel" title="试题管理">
 		<div class="style-toolbar">
 		<label class="x-form-item-label" style="width:65px;" id="ext-gen22"> 试题类型:</label>
-		<select id="cc" class="easyui-combobox" name="dept" style="width:200px;">
-		    <option value="aa">aitem1</option>
-		    <option>bitem2</option>
-		    <option>bitem3</option>
-		    <option>ditem4</option>
-		    <option>eitem5</option>
+		<select id="stTypeSelect" class="easyui-combobox" name="dept" style="width:200px;">
+			<option value="all">全部</option>
+		    <option value="aitem1">aitem1</option>
+		    <option value="aitem2">bitem2</option>
+		    <option value="aitem3">bitem3</option>
+		    <option value="aitem4">ditem4</option>
+		    <option value="aitem5">eitem5</option>
 		</select>
 		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'" onclick="searchBtn();" style="width:80px">Search</a>
-		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload'" style="width:80px">Reload</a>
+		<a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-reload'" onclick="refreshBtn();" style="width:80px">Reload</a>
 		</div>
 		<div style="margin-top:3px;"></div>
 	
@@ -223,9 +239,13 @@ if(session.getAttribute("userInfo")!=null){
 			</tr>
 		</thead>
 	</table>
-
-		
 	</div>
+	<%--弹出窗口--%>
+	<div id="newSTWindow" class="easyui-window" title="新建试题" style="width:600px;height:400px"
+    data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
+    closed="true"
+    href="<%=basePath%>newShiTi"
+    >
 	
 </body>
 </html>

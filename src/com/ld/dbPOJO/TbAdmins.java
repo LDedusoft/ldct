@@ -1,6 +1,10 @@
 package com.ld.dbPOJO;
 
-
+/**
+ * 管理员
+ * @author wjw
+ *
+ */
 public class TbAdmins {
 	private int id;
 	private String UserName ;

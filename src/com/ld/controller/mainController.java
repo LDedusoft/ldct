@@ -58,13 +58,18 @@ public class mainController {
 	public String dsgIndex(){
 		return "/design/index";
 	}
-	
+	//试题页面跳转
 	@RequestMapping(value="shiTiGuanLi",method=RequestMethod.GET)
 	public String dsgSTList(){
 		return "/design/shiti_guanli/STList";
 	}
 	
+	@RequestMapping(value="newShiTi",method=RequestMethod.GET)
+	public String dsgnewShiTi(){
+		return "/design/shiti_guanli/newShiTi";
+	}
 	
+	//系统设置页面跳转
 	@RequestMapping(value="xiTongGuanLi",method=RequestMethod.GET)
 	public String dsgXT_Guanli(){
 		return "/design/xitong_shezhi/XT_Guanli";

@@ -1,7 +1,7 @@
 package com.ld.dbPOJO;
 
 /**
- * 
+ * 主考
  * @author wjw
  *CREATE TABLE SH_Teacher
 (

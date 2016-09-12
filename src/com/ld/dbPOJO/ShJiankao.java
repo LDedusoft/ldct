@@ -1,7 +1,7 @@
 package com.ld.dbPOJO;
 
 /**
- * 
+ * 监考
  * @author wjw
  *CREATE TABLE SH_JianKao(
 	KaoguanID INT NOT NULL PRIMARY KEY,
