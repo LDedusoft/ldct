@@ -45,7 +45,9 @@ function showPage(url){
 	parent.document.getElementById("rightFrame").src=url;
 }
 
-function logout(){}
+function logout(){
+	parent.window.location.href="<%=basePath %>designLogout"; 
+}
 </script>
 
 

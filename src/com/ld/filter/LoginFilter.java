@@ -32,7 +32,7 @@ public class LoginFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 
 		// 不过滤的uri
-		String[] notFilter = new String[] { "designLogin", "login" };
+		String[] notFilter = new String[] { "designLogin", "loginAction","/uimaker/","/easyui/","/js/","/css/"};
 
 		// 请求的uri
 		String uri = request.getRequestURI();
@@ -53,13 +53,13 @@ public class LoginFilter extends OncePerRequestFilter {
 				if (null == obj) {
 					// 如果session中不存在登录者实体，则弹出框提示重新登录
 					// 设置request和response的字符集，防止乱码
-					request.setCharacterEncoding("UTF-8");
-					response.setCharacterEncoding("UTF-8");
+					//request.setCharacterEncoding("UTF-8");
+					//response.setCharacterEncoding("UTF-8");
 					PrintWriter out = response.getWriter();
 					String loginPage = "designLogin";
 					StringBuilder builder = new StringBuilder();
 					builder.append("<script type=\"text/javascript\">");
-					builder.append("alert('网页过期，请重新登录！');");
+					//builder.append("alert('网页过期，请重新登录！');");
 					builder.append("window.top.location.href='");
 					builder.append(loginPage);
 					builder.append("';");
