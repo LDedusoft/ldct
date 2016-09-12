@@ -6,40 +6,57 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta charset="UTF-8">
-	<title>Basic Dialog - jQuery EasyUI Demo</title>
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>easyui/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="<%=basePath%>easyui/themes/icon.css">
-	<script type="text/javascript" src="<%=basePath%>easyui/jquery.min.js"></script>
-	<script type="text/javascript" src="<%=basePath%>easyui/jquery.easyui.min.js"></script>
-
-	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="<%=basePath %>uimaker/css/style.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-	<h2>Basic Dialog</h2>
-	<p>Click below button to open or close dialog.</p>
-	<div style="margin:20px 0;">
-		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#win').window('open')">Open</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#win').window('close')">Close</a>
-	</div>
-	<div id="dlg" class="easyui-dialog" title="Basic Dialog" style="width:600px;height:400px"
-	 data-options="iconCls:'icon-save',minimizable:true" 
-	 style="width:400px;height:200px;padding:10px"
-	 href="<%=basePath%>window"
-	 >
-	 
-	<div id="win" class="easyui-window" title="My Window" style="width:600px;height:400px"
-    data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
-    closed="true"
-    href="window"
-    >
-	</div>
 
-	</div>
-	
-	
+
+<body>
+<script>
+	function logout(){
+		parent.window.location.href="<%=basePath %>designLogout"; 
+	}
+</script>
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">工具箱</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    <div class="formtitle"><span>常用功能</span></div>
+    
+    <div class="toolsli">
+    <ul class="toollist">
+    <li><a href="shiTiGuanLi"><img src="<%=basePath %>uimaker/images/i01.png" /></a><h2>试题管理</h2></li>
+    <li><a href="shiJuanGuanLi"><img src="<%=basePath %>uimaker/images/i02.png" /></a><h2>试卷管理</h2></li>
+    <li><a href="biSaiGuanLi"><img src="<%=basePath %>uimaker/images/i03.png" /></a><h2>比赛管理</h2></li>
+    <li><a href="canSaiDuiYuanGuanLi"><img src="<%=basePath %>uimaker/images/i04.png" /></a><h2>队员管理</h2></li>
+    <li><a href="biSaiTongJi"><img src="<%=basePath %>uimaker/images/i05.png" /></a><h2>比赛统计</h2></li>
+    </ul>
+    </div>
+    
+    <div class="formtitle"><span>系统设置</span></div>
+    
+    <div class="toolsli">
+    <ul class="toollist">
+    <li><a href="xiTongSheZhi"><img src="<%=basePath %>uimaker/images/i06.png" /></a><h2>系统设置</h2></li>
+    <li><a href="#" onclick="logout()"><img src="<%=basePath %>uimaker/images/i07.png" /></a><h2>退出系统</h2></li>     
+    </ul>
+    </div>
+    
+    
+    
+    </div>
+
+
 </body>
+
 </html>
