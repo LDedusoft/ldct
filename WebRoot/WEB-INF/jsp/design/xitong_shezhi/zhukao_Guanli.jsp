@@ -25,12 +25,12 @@ if(session.getAttribute("userInfo")!=null){
 					text:'Add',
 					iconCls:'icon-add',
 					handler:function(){
-						onclick=$('#newSTWindow').window('open');
+						onclick=$('#newZKWindow').window('open');
 		}
 		},{
 	    text:'编辑',
 	    iconCls:'icon-cut',
-	    handler:function(){alert('cut')}
+	    handler:function(){onclick=$('#editZKWindow').window('open');}
 	    },'-',{
 	    text:'删除',
 	    iconCls:'icon-save',
@@ -187,7 +187,13 @@ if(session.getAttribute("userInfo")!=null){
     </table>
     </div>
 	<%--弹出窗口--%>
-	<div id="newSTWindow" class="easyui-window" title="新建主考" style="width:600px;height:400px"
+	<div id="newZKWindow" class="easyui-window" title="新建主考" style="width:600px;height:400px"
+    data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
+    closed="true"
+    href="<%=basePath%>newZhuKao"
+    ></div>
+    <%--弹出窗口--%>
+	<div id="editZKWindow" class="easyui-window" title="编辑主考" style="width:600px;height:400px"
     data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
     closed="true"
     href="<%=basePath%>newZhuKao"
