@@ -76,8 +76,8 @@ if(session.getAttribute("userInfo")!=null){
 	 
 	 <div style="width:400px;height: 50px;padding-left:15px;float:left;">
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="shiti"  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('shiti')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
 	    	</div>
 	    	
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
@@ -135,6 +135,10 @@ if(session.getAttribute("userInfo")!=null){
 		}
 		function clearForm(){
 			$('#ff').form('clear');
+		}
+		
+		function selectCheck(checkName){
+			$('#'+checkName).prop('checked',!$('#'+checkName).prop('checked'));
 		}
 	</script>
   </body>
