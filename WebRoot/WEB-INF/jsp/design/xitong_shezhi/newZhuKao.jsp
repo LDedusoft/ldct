@@ -69,18 +69,50 @@ if(session.getAttribute("userInfo")!=null){
 	    		</tr>
 	    		
 	    	</table>
-	 <div style="height:80px;margin:0px;padding:0px;">
-	 <div style="width:60px;height:80px;line-height:80px;padding-left:10px;display:inline-block;"><label style="height:80px;line-height:80px;">权限分配:</label></div>
-	 <div style="width:350px;height: 50px;padding-left:8px;display:inline-block;">
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">试题管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">试卷管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">比赛管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">参赛队员管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">比赛统计</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">学校管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">主考管理</label></div>
-	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">监考管理</label></div>
-	    </div>
+	 <div style="height:60px;margin:0px;padding:0px;margin-top: 10px">
+	 <div style="width:60px;height:60px;line-height:60px;padding-left:7px;float:left;vertical-align: top;">
+	 	<label style="height:20px;line-height:20px;vertical-align: top;margin-top: 0px">权限分配:</label>
+	 </div>
+	 
+	 <div style="width:400px;height: 50px;padding-left:15px;float:left;">
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
+	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px;">
+	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    	</div>
+	    	
+	    	
+	    	
+	    			
+	    	 </div>
 	    </div>
 	    </form>
 	    <div style="text-align:center;padding:5px">
@@ -92,8 +124,8 @@ if(session.getAttribute("userInfo")!=null){
 	<script>
 		var sexNum = document.getElementById("sex").options.length;
             var schoolNum = document.getElementById("school").options.length;
-            $("#sex").combobox({panelHeight:20*sexNum});
-            $("#school").combobox({panelHeight:20*schoolNum});
+            $("#sex").combobox({panelHeight:25*sexNum});
+            $("#school").combobox({panelHeight:25*schoolNum});
             $('#fb').filebox({
             buttonText: '选择图片',
             buttonAlign: 'left'
