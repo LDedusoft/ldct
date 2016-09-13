@@ -31,47 +31,57 @@ if(session.getAttribute("userInfo")!=null){
   </head>
   
   <body>
-<div style="width:400px">
-		<div style="padding:10px 60px 20px 60px">
+<div style="width:500px">
+		<div style="padding:10px 0px 20px 0px">
 	    <form id="ff" method="post">
 	    	<table cellpadding="5">
 	    		<tr>
-	    			<td>用户名:</td>
+	    			<td width=60px;>用户名:</td>
 	    			<td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
-	    			<td>密码:</td>
+	    			<td width=60px;>密码:</td>
 	    			<td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
 	    		</tr>
 	    		<tr>
-	    			<td>确认密码:</td>
+	    			<td width=60px;>确认密码:</td>
 	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
-	    			<td>真实密码:</td>
+	    			<td width=60px;>真实密码:</td>
 	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
-	    			<td>性别:</td>
+	    			<td width=60px;>性别:</td>
 	    			<td>
 	    				<select id="sex" class="easyui-combobox" name="language" style="width:50px;"><option value="ar">男</option><option value="bg">女</option></select>
 	    			</td>
 	    		</tr>
 	    		<tr>
-	    			<td>电话:</td>
+	    			<td width=60px;>电话:</td>
 	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
-	    			<td>所属学校:</td>
+	    			<td width=60px;>所属学校:</td>
 	    			<td>
 	    				<select id="school" class="easyui-combobox" name="language" style="width:80px;"><option value="ar">龙鼎</option><option value="bg">奇峰</option></select>
 	    			</td>
 	    		</tr>
-	    		<tr>
-	    			<td>权限分配:</td>
-	    			<td><input style="height:20px;line-height: 20px;" type="checkbox" name="sex" value="male"><label style="height:20px;line-height: 20px;display:inline-block;">aaaa</label></td>
-	    		</tr>
+	    		
 	    	</table>
+	 <div style="height:80px;margin:0px;padding:0px;">
+	 <div style="width:60px;height:80px;line-height:80px;padding-left:10px;display:inline-block;"><label style="height:80px;line-height:80px;">权限分配:</label></div>
+	 <div style="width:350px;height: 50px;padding-left:8px;display:inline-block;">
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">试题管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">试卷管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">比赛管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">参赛队员管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">比赛统计</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">学校管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">主考管理</label></div>
+	    			<div style="display:inline-block;height:40px;line-height:40px;"><input  type="checkbox" name="sex" value="male"><label style="display:inline-block;height:40px;line-height:40px;">监考管理</label></div>
+	    </div>
+	    </div>
 	    </form>
 	    <div style="text-align:center;padding:5px">
 	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">Submit</a>
