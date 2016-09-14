@@ -17,10 +17,11 @@ import com.ld.utils.MD5Util;
 public class LoginService {
 	public static TeacherUserInfo loginAction(String userName, String password,String type){
 		Object params[] = {userName,MD5Util.MD5(password)};  
-		Connection conn = ConnManager.getConn();
+		Connection conn = null;
 		String sql ="";
 		TeacherUserInfo userInfo = new TeacherUserInfo();
 		try {
+			conn =  ConnManager.getConn();
 			if("管理员".equals(type)){
 				sql = "SELECT * FROM TBADMINS WHERE USERNAME=? AND PASSWORD=?";
 				TbAdmins tbAdmins = (TbAdmins)new QueryRunner().query(conn, sql, new BeanHandler<TbAdmins>(TbAdmins.class),params);  

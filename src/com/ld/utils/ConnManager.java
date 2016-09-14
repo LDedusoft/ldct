@@ -65,14 +65,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 	    private static Connection conn;
 	    private static ComboPooledDataSource ds = new ComboPooledDataSource("defaultConfig");
 
-	    public static Connection getConn() {
-	        try {
+	    public static Connection getConn()throws Exception {
 	            conn = ds.getConnection();
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        } catch (Exception e) {
-	            e.printStackTrace();
-	        }
 	        return conn;
 	    }
 	    
