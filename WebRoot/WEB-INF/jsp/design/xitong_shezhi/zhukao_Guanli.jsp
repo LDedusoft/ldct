@@ -186,13 +186,13 @@ if(session.getAttribute("userInfo")!=null){
     </thead>
     </table>
     </div>
-	<%--弹出窗口--%>
+	<%--弹出新建主考窗口--%>
 	<div id="newZKWindow" class="easyui-window" title="新建主考" style="width:600px;height:400px"
     data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
     closed="true"
     href="<%=basePath%>newZhuKao"
     ></div>
-    <%--弹出窗口--%>
+    <%--弹出编辑主考窗口--%>
 	<div id="editZKWindow" class="easyui-window" title="编辑主考" style="width:600px;height:400px"
     data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
     closed="true"

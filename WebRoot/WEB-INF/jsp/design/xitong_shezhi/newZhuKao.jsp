@@ -27,93 +27,87 @@ if(session.getAttribute("userInfo")!=null){
 	<link rel="stylesheet" type="text/css" href="<%=basePath%>easyui/themes/icon.css">
 	<script type="text/javascript" src="<%=basePath%>easyui/jquery.min.js"></script>
 	<script type="text/javascript" src="<%=basePath%>easyui/jquery.easyui.min.js"></script>
-
   </head>
-  
-  <body>
-<div style="width:500px">
-		<div style="padding:10px 0px 20px 0px">
+<body>
+<div style="width:500px;">
+		<div style="padding:0px 0px 0px 0px; overflow:hidden;">
 	    <form id="ff" method="post">
 	    	<table cellpadding="5">
 	    		<tr>
-	    			<td width=60px;>用户名:</td>
-	    			<td><input class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
+	    			<td style="width：60px;">用户名:</td>
+	    			<td><input style="height:23px;" class="easyui-textbox" type="text" name="name" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>密码:</td>
-	    			<td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
+	    			<td><input style="height:23px;" class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>确认密码:</td>
-	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+	    			<td><input style="height:23px;" class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>真实密码:</td>
-	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+	    			<td><input style="height:23px;" class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>性别:</td>
 	    			<td>
-	    				<select id="sex" class="easyui-combobox" name="language" style="width:50px;"><option value="ar">男</option><option value="bg">女</option></select>
+	    				<select id="sex" class="easyui-combobox" name="language" style="width:50px;height:23px;"><option value="ar">男</option><option value="bg">女</option></select>
 	    			</td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>电话:</td>
-	    			<td><input class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
+	    			<td><input style="height:23px;" class="easyui-textbox" type="text" name="subject" data-options="required:true"></input></td>
 	    		</tr>
 	    		<tr>
 	    			<td width=60px;>所属学校:</td>
 	    			<td>
-	    				<select id="school" class="easyui-combobox" name="language" style="width:80px;"><option value="ar">龙鼎</option><option value="bg">奇峰</option></select>
+	    				<select id="school" class="easyui-combobox" name="language" style="width:80px;height:23px;"><option value="ar">龙鼎</option><option value="bg">奇峰</option></select>
 	    			</td>
 	    		</tr>
 	    		
 	    	</table>
 	 <div style="height:60px;margin:0px;padding:0px;margin-top: 10px">
-	 <div style="width:60px;height:60px;line-height:60px;padding-left:7px;float:left;vertical-align: top;">
-	 	<label style="height:20px;line-height:20px;vertical-align: top;margin-top: 0px">权限分配:</label>
-	 </div>
+	 	<div style="width:60px;height:60px;line-height:60px;padding-left:7px;float:left;vertical-align: top;">
+	 		<label style="height:20px;line-height:20px;vertical-align: top;margin-top: 0px">权限分配:</label>
+	 	</div>
 	 
-	 <div style="width:400px;height: 50px;padding-left:15px;float:left;">
+	 	<div style="width:400px;height: 50px;padding-left:15px;float:left;">
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
 	    		<input id="shiti"  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
 	    		<label onclick="selectCheck('shiti')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
 	    	</div>
 	    	
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id='shijuan'  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('shijuan')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试卷管理</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="bisaiguanli"  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('bisaiguanli')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">比赛管理</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="duiyuan" type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('duiyuan')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">参赛队员管理</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="bisaitongji" type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('bisaitongji')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">比赛统计</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="xuexiao"  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('xuexiao')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">学校管理</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="zhukao"  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px">
+	    		<label onclick="selectCheck('zhukao')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">主考管理</label>
 	    	</div>
 	    	<div style="float:left;height:20px;line-height:20px;margin-right: 10px;text-align:center;margin-top:10px;">
-	    		<input  type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px;">
-	    		<label style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">试题管理</label>
+	    		<input id="jiankao" type="checkbox" name="sex" value="male" style="margin:0px;margin-right: 0px;">
+	    		<label onclick="selectCheck('jiankao')" style="height:20px;line-height:20px;font-size: 15px;margin-left: -5px">监考管理</label>
 	    	</div>
-	    	
-	    	
-	    	
-	    			
-	    	 </div>
 	    </div>
+	  </div>
 	    </form>
 	    <div style="text-align:center;padding:5px">
 	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()">Submit</a>
