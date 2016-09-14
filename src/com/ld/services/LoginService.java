@@ -67,6 +67,8 @@ public class LoginService {
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
+		}finally{
+			ConnManager.closeConn(conn); //关闭数据库connection
 		}
 		return userInfo;
 	}
