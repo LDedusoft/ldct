@@ -53,15 +53,20 @@ public class XiTongService {
 	 * 增加主考
 	 * @param param
 	 * @return
+	 *
 	 */
 	public static boolean addZhuKao(ShTeacher shTeacher){
 		boolean success = false;
 		
-		 final String SQL = "insert into **** VALUES(?,?,?,?)";  
+		 final String SQL = "insert into SH_Teacher (userName,password,teacherName,teacherSex,teacherTel,shooId,teacherPower) values(?,?,?,?,?,?,?)";  
 		    Connection conn = null;
 		    try {  
 		        conn = ConnManager.getConn();  
-		        int result = new QueryRunner().update(conn, SQL, new Object[] {shTeacher.getUserName(),shTeacher.getPassword(),shTeacher.getShooId(),shTeacher.getTeacherName()});  
+		        int result = new QueryRunner().update(conn, SQL, new Object[] {
+		        		shTeacher.getUserName(),shTeacher.getPassword(),
+		        		shTeacher.getTeacherName(),shTeacher.getTeacherSex(),
+		        		shTeacher.getTeacherTel(),shTeacher.getShooId(),"'"+shTeacher.getTeacherPower()+"'"
+		        		});  
 		        if (0 < result){
 		        	success = true;
 		        } 
@@ -201,11 +206,11 @@ public class XiTongService {
 		ShTeacher shTeacher = new ShTeacher();
 		shTeacher.setUserName("aa");
 		shTeacher.setPassword("123");
-		shTeacher.setShooId("33333");
+//		shTeacher.setShooId("33333");
 		ShTeacher shTeacher2 = new ShTeacher();
 		shTeacher2.setUserName("hhhhh");
 		shTeacher2.setPassword("password");
-		shTeacher2.setShooId("sssss");
+//		shTeacher2.setShooId("sssss");
 		List<ShTeacher> list = new ArrayList<ShTeacher>();
 		list.add(shTeacher);
 		list.add(shTeacher2);

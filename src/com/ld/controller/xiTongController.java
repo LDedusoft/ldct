@@ -40,14 +40,18 @@ public class xiTongController {
 	 * @param out
 	 */
 	@RequestMapping(value = "addZhuKao", method=RequestMethod.POST)
-	public void addZhuKao(String params,PrintWriter out){
+	public void addZhuKao(String name,String pwd,String truename,
+			String sex,String tel,String school,String words,PrintWriter out){
 		boolean success = false;//是否执行成功
 		ShTeacher shTeacher = new ShTeacher();
 		//TODO 参数设置进实体类
-		shTeacher.setUserName("");
-		shTeacher.setPassword("");
-		
-		
+		shTeacher.setUserName(name);
+		shTeacher.setPassword(pwd);
+		shTeacher.setTeacherName(truename);
+		shTeacher.setTeacherSex(sex);
+		shTeacher.setTeacherTel(tel);
+		shTeacher.setShooId(Integer.parseInt(school));
+		shTeacher.setTeacherPower(words);
 		success =  XiTongService.addZhuKao(shTeacher);
 		out.write(String.valueOf(success));
 	}
