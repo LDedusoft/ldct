@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.ld.dbPOJO.ShJiankao;
+import com.ld.dbPOJO.ShSchool;
+import com.ld.dbPOJO.ShTeacher;
 import com.ld.services.XiTongService;
 
 /** 
@@ -33,14 +36,19 @@ public class xiTongController {
 	
 	/**
 	 * 新建主考
-	 * @param params 主考信息 json格式
+	 * @param params 
 	 * @param out
 	 */
 	@RequestMapping(value = "addZhuKao", method=RequestMethod.POST)
 	public void addZhuKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
-		success =  XiTongService.addZhuKao(params);
+		ShTeacher shTeacher = new ShTeacher();
+		//TODO 参数设置进实体类
+		shTeacher.setUserName("");
+		shTeacher.setPassword("");
+		
+		
+		success =  XiTongService.addZhuKao(shTeacher);
 		out.write(String.valueOf(success));
 	}
 	
@@ -52,8 +60,12 @@ public class xiTongController {
 	@RequestMapping(value = "editZhuKao", method=RequestMethod.POST)
 	public void editZhuKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
-		success =  XiTongService.editZhuKao(params);
+		ShTeacher shTeacher = new ShTeacher();
+		//TODO 参数设置进实体类
+		shTeacher.setUserName("");
+		shTeacher.setPassword("");
+		
+		success =  XiTongService.editZhuKao(shTeacher);
 		out.write(String.valueOf(success));
 	}
 	
@@ -65,8 +77,12 @@ public class xiTongController {
 	@RequestMapping(value = "delZhuKao", method=RequestMethod.POST)
 	public void delZhuKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
-		success =  XiTongService.delZhuKao(params);
+		ShTeacher shTeacher = new ShTeacher();
+		//TODO 参数设置进实体类
+		shTeacher.setUserName("");
+		shTeacher.setPassword("");
+		
+		success =  XiTongService.delZhuKao(shTeacher);
 		out.write(String.valueOf(success));
 	}
 	
@@ -79,10 +95,10 @@ public class xiTongController {
 	 */
 	@RequestMapping(value = "getJianKao", method=RequestMethod.POST)
 	public void getJianKao(PrintWriter out){
-		JSONArray  userArray  = new JSONArray() ;//主考信息   
-		//TODO 从数据库获取用户信息列表
-		
-		out.write(userArray.toString());
+		String userLiString = "" ;   
+		//TODO 获取用户信息列表
+		userLiString = XiTongService.getJianKao();
+		out.write(userLiString);
 	}
 	
 	/**
@@ -93,7 +109,12 @@ public class xiTongController {
 	@RequestMapping(value = "addJianKao", method=RequestMethod.POST)
 	public void addJianKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShJiankao shJiankao = new ShJiankao();
+		//TODO 参数设置进实体类
+		shJiankao.setUserName("");
+		shJiankao.setPassword("");
+		
+		success =  XiTongService.addJianKao(shJiankao);
 		
 		out.write(String.valueOf(success));
 	}
@@ -106,7 +127,12 @@ public class xiTongController {
 	@RequestMapping(value = "editJianKao", method=RequestMethod.POST)
 	public void editJianKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShJiankao shJiankao = new ShJiankao();
+		//TODO 参数设置进实体类
+		shJiankao.setUserName("");
+		shJiankao.setPassword("");
+		
+		success =  XiTongService.editJianKao(shJiankao);
 		
 		out.write(String.valueOf(success));
 	}
@@ -119,8 +145,12 @@ public class xiTongController {
 	@RequestMapping(value = "delJianKao", method=RequestMethod.POST)
 	public void delJianKao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShJiankao shJiankao = new ShJiankao();
+		//TODO 参数设置进实体类
+		shJiankao.setUserName("");
+		shJiankao.setPassword("");
 		
+		success =  XiTongService.delJianKao(shJiankao);
 		out.write(String.valueOf(success));
 	}
 	
@@ -159,7 +189,6 @@ public class xiTongController {
 	@RequestMapping(value = "editUserInfo", method=RequestMethod.POST)
 	public void editUserInfo(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
 		
 		out.write(String.valueOf(success));
 	}
@@ -173,10 +202,10 @@ public class xiTongController {
 	 */
 	@RequestMapping(value = "getXueXiao", method=RequestMethod.POST)
 	public void getXueXiao(PrintWriter out){
-		JSONArray  userArray  = new JSONArray() ;//主考信息   
-		//TODO 从数据库获取用户信息列表
-		
-		out.write(userArray.toString());
+		String schoolLiString = "" ;   
+		//TODO 获取用户信息列表
+		schoolLiString = XiTongService.getXueXiao();
+		out.write(schoolLiString);
 	}
 	
 	/**
@@ -187,8 +216,11 @@ public class xiTongController {
 	@RequestMapping(value = "addXueXiao", method=RequestMethod.POST)
 	public void addXueXiao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShSchool shSchool = new ShSchool();
+		//TODO 参数设置进实体类
+		shSchool.setSchoolName("");
 		
+		success = XiTongService.addXueXiao(shSchool);
 		out.write(String.valueOf(success));
 	}
 	
@@ -200,7 +232,11 @@ public class xiTongController {
 	@RequestMapping(value = "editXueXiao", method=RequestMethod.POST)
 	public void editXueXiao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShSchool shSchool = new ShSchool();
+		//TODO 参数设置进实体类
+		shSchool.setSchoolName("");
+		
+		success = XiTongService.editXueXiao(shSchool);
 		
 		out.write(String.valueOf(success));
 	}
@@ -213,7 +249,11 @@ public class xiTongController {
 	@RequestMapping(value = "delXueXiao", method=RequestMethod.POST)
 	public void delXueXiao(String params,PrintWriter out){
 		boolean success = false;//是否执行成功
-		//TODO 获取参数执行数据处理
+		ShSchool shSchool = new ShSchool();
+		//TODO 参数设置进实体类
+		shSchool.setSchoolName("");
+		
+		success = XiTongService.delXueXiao(shSchool);
 		
 		out.write(String.valueOf(success));
 	}

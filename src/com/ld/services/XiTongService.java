@@ -17,6 +17,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.ld.controller.mainController;
 import com.ld.dbPOJO.ShJiankao;
+import com.ld.dbPOJO.ShSchool;
 import com.ld.dbPOJO.ShTeacher;
 import com.ld.dbPOJO.TbAdmins;
 import com.ld.dbPOJO.TeacherUserInfo;
@@ -53,15 +54,14 @@ public class XiTongService {
 	 * @param param
 	 * @return
 	 */
-	public static boolean addZhuKao(String param){
+	public static boolean addZhuKao(ShTeacher shTeacher){
 		boolean success = false;
 		
 		 final String SQL = "insert into **** VALUES(?,?,?,?)";  
 		    Connection conn = null;
 		    try {  
-		    	JSONObject userInfo = JSONObject.fromObject(param);
 		        conn = ConnManager.getConn();  
-		        int result = new QueryRunner().update(conn, SQL, new Object[] {userInfo.get("name"),userInfo.get("name"),userInfo.get("name"),userInfo.get("name")});  
+		        int result = new QueryRunner().update(conn, SQL, new Object[] {shTeacher.getUserName(),shTeacher.getPassword(),shTeacher.getShooId(),shTeacher.getTeacherName()});  
 		        if (0 < result){
 		        	success = true;
 		        } 
@@ -78,7 +78,7 @@ public class XiTongService {
 	 * @param param
 	 * @return
 	 */
-	public static boolean editZhuKao(String param){
+	public static boolean editZhuKao(ShTeacher shTeacher){
 		boolean success = false;
 		//TODO 执行数据处理
 		
@@ -90,13 +90,109 @@ public class XiTongService {
 	 * @param param
 	 * @return
 	 */
-	public static boolean delZhuKao(String param){
+	public static boolean delZhuKao(ShTeacher shTeacher){
 		boolean success = false;
 		//TODO 执行数据处理
 		
 		return success;
 	}
 	
+	
+	//监考===============================================
+	/**
+	 * 获取监考列表
+	 * @return
+	 */
+	public static String getJianKao(){
+		
+		JSONArray  userArray  = new JSONArray() ;//监考信息   
+		
+		return userArray.toString();
+	}
+	
+	/**
+	 * 增加监考
+	 * @param param
+	 * @return
+	 */
+	public static boolean addJianKao(ShJiankao shJiankao){
+		boolean success = false;
+		
+		return success;
+	}
+	
+	/**
+	 * 编辑监考
+	 * @param param
+	 * @return
+	 */
+	public static boolean editJianKao(ShJiankao shJiankao){
+		boolean success = false;
+		//TODO 执行数据处理
+		
+		return success;
+	}
+	
+	/**
+	 * 删除监考
+	 * @param param
+	 * @return
+	 */
+	public static boolean delJianKao(ShJiankao shJiankao){
+		boolean success = false;
+		//TODO 执行数据处理
+		
+		return success;
+	}
+	
+	//账号=============
+	
+	//学校管理=====================
+	/**
+	 * 获取学校列表
+	 * @return
+	 */
+	public static String getXueXiao(){
+		
+		JSONArray  userArray  = new JSONArray() ;//学校信息   
+		
+		return userArray.toString();
+	}
+	
+	/**
+	 * 增加学校
+	 * @param param
+	 * @return
+	 */
+	public static boolean addXueXiao(ShSchool shSchool){
+		boolean success = false;
+		
+		return success;
+	}
+	
+	/**
+	 * 编辑学校
+	 * @param param
+	 * @return
+	 */
+	public static boolean editXueXiao(ShSchool shSchool){
+		boolean success = false;
+		//TODO 执行数据处理
+		
+		return success;
+	}
+	
+	/**
+	 * 删除学校
+	 * @param param
+	 * @return
+	 */
+	public static boolean delXueXiao(ShSchool shSchool){
+		boolean success = false;
+		//TODO 执行数据处理
+		
+		return success;
+	}
 	
 	
 	
