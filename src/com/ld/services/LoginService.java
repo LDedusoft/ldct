@@ -43,7 +43,7 @@ public class LoginService {
 				 userInfo.setUserType("主考");
 					userInfo.setHeadImage(shTeacher.getHeadImage());
 					userInfo.setPassword(shTeacher.getPassword());
-					userInfo.setShooId(shTeacher.getShooId());
+					userInfo.setShooId(shTeacher.getShoolId());
 					userInfo.setTeacherMobile(shTeacher.getTeacherMobile());
 					userInfo.setTeacherName(shTeacher.getTeacherName());
 					userInfo.setTeacherPower(shTeacher.getTeacherPower());

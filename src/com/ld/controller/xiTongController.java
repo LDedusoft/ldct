@@ -50,7 +50,7 @@ public class xiTongController {
 		shTeacher.setTeacherName(truename);
 		shTeacher.setTeacherSex(sex);
 		shTeacher.setTeacherTel(tel);
-		shTeacher.setShooId(Integer.parseInt(school));
+		shTeacher.setShoolId(Integer.parseInt(school));
 		shTeacher.setTeacherPower(words);
 		success =  XiTongService.addZhuKao(shTeacher);
 		out.write(String.valueOf(success));

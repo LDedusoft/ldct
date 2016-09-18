@@ -26,7 +26,7 @@ public class ShTeacher {
 	private String teacherTel="";
 	private String teacherMobile="";
 	private String teacherPower="";
-	private int shooId=0;
+	private int shoolId=0;
 	private String headImage="";
 
 	public int getTeacherId() {
@@ -77,11 +77,12 @@ public class ShTeacher {
 	public void setTeacherPower(String teacherPower) {
 		this.teacherPower = teacherPower;
 	}
-	public int getShooId() {
-		return shooId;
+
+	public int getShoolId() {
+		return shoolId;
 	}
-	public void setShooId(int shooId) {
-		this.shooId = shooId;
+	public void setShoolId(int shoolId) {
+		this.shoolId = shoolId;
 	}
 	public String getHeadImage() {
 		return headImage;

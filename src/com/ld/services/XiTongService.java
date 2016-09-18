@@ -58,14 +58,14 @@ public class XiTongService {
 	public static boolean addZhuKao(ShTeacher shTeacher){
 		boolean success = false;
 		
-		 final String SQL = "insert into SH_Teacher (userName,password,teacherName,teacherSex,teacherTel,shooId,teacherPower) values(?,?,?,?,?,?,?)";  
+		 final String SQL = "insert into SH_Teacher (userName,password,teacherName,teacherSex,teacherTel,shoolId,teacherPower) values(?,?,?,?,?,?,?)";  
 		    Connection conn = null;
 		    try {  
 		        conn = ConnManager.getConn();  
 		        int result = new QueryRunner().update(conn, SQL, new Object[] {
 		        		shTeacher.getUserName(),shTeacher.getPassword(),
 		        		shTeacher.getTeacherName(),shTeacher.getTeacherSex(),
-		        		shTeacher.getTeacherTel(),shTeacher.getShooId(),"'"+shTeacher.getTeacherPower()+"'"
+		        		shTeacher.getTeacherTel(),shTeacher.getShoolId(),"'"+shTeacher.getTeacherPower()+"'"
 		        		});  
 		        if (0 < result){
 		        	success = true;
