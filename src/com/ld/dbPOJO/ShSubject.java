@@ -1,5 +1,7 @@
 package com.ld.dbPOJO;
 
+import java.math.BigDecimal;
+
 /**
  * 试题
  * @author wjw
@@ -21,17 +23,16 @@ TypeName1 nvarchar(20) NULL,
  */
 public class ShSubject {
 	private int id;
-	private String TypeName1="" ;
+	private String TypeName1="";
 	private String  TypeName2="";
 	private String  Creater="";
-	private String  cType="";
+	private int  cType=0;
 	private String  CreateTime="";
 	private String  remark="";
-	private String  score1="";
+	private float  score1=0;
 	private String  State="";
-	private String  score2="";
-	private String  score="";
-	private String  Name="";
+	private float  score2=0;
+	private float  score=0;
 	public int getId() {
 		return id;
 	}
@@ -56,10 +57,10 @@ public class ShSubject {
 	public void setCreater(String creater) {
 		Creater = creater;
 	}
-	public String getcType() {
+	public int getcType() {
 		return cType;
 	}
-	public void setcType(String cType) {
+	public void setcType(int cType) {
 		this.cType = cType;
 	}
 	public String getCreateTime() {
@@ -74,10 +75,10 @@ public class ShSubject {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-	public String getScore1() {
+	public float getScore1() {
 		return score1;
 	}
-	public void setScore1(String score1) {
+	public void setScore1(float score1) {
 		this.score1 = score1;
 	}
 	public String getState() {
@@ -86,16 +87,16 @@ public class ShSubject {
 	public void setState(String state) {
 		State = state;
 	}
-	public String getScore2() {
+	public float getScore2() {
 		return score2;
 	}
-	public void setScore2(String score2) {
+	public void setScore2(float score2) {
 		this.score2 = score2;
 	}
-	public String getScore() {
+	public float getScore() {
 		return score;
 	}
-	public void setScore(String score) {
+	public void setScore(float score) {
 		this.score = score;
 	}
 	public String getName() {
@@ -104,6 +105,12 @@ public class ShSubject {
 	public void setName(String name) {
 		Name = name;
 	}
+	private String  Name="";
 	
+	public static void main(String[] args) {
+		BigDecimal price =new BigDecimal("1.03");
+		BigDecimal price1 =new BigDecimal("0.42");
+		System.out.println(price.subtract(price1).doubleValue());
+	}
 	
 }

@@ -229,13 +229,14 @@ if(session.getAttribute("userInfo")!=null){
 				">
 		<thead>
 			<tr>
-				<th field="inv" width="80">Inv No</th>
-				<th field="date" width="100">Date</th>
-				<th field="name" width="80">Name</th>
-				<th field="amount" width="80" align="right">Amount</th>
-				<th field="price" width="80" align="right">Price</th>
-				<th field="cost" width="100" align="right">Cost</th>
-				<th field="note" width="110">Note</th>
+				<th field="Name" width="80">试题名称</th>
+				<th field="TypeName1" width="100">试题类型</th>
+				<th field="TypeName2" width="80">流程类型</th>
+				<th field="Creater" width="80" align="right">创建人</th>
+				<th field="CreateTime" width="80" align="right">创建时间</th>
+				<th field="score2" width="100" align="right">情景交互部分分值</th>
+				<th field="score1" width="110">表单部分分值</th>
+				<th field="score" width="110">总分</th>
 			</tr>
 		</thead>
 	</table>
