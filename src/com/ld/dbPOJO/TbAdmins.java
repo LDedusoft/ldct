@@ -7,11 +7,11 @@ package com.ld.dbPOJO;
  */
 public class TbAdmins {
 	private int id;
-	private String UserName ;
-	private String PassWord ;
-	private String TeacherName ;
-	private String TeacherSex ;
-	private String HeadImage ;
+	private String UserName="" ;
+	private String PassWord="" ;
+	private String TeacherName="" ;
+	private String TeacherSex="" ;
+	private String HeadImage="" ;
 	public int getId() {
 		return id;
 	}

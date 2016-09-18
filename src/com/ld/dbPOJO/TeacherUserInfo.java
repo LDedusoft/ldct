@@ -6,16 +6,16 @@ package com.ld.dbPOJO;
  *
  */
 public class TeacherUserInfo {
-	private String userType ;
-	private String userName ;
-	private String password;
-	private String teacherName;
-	private String teacherSex;
-	private String teacherTel;
-	private String teacherMobile;
-	private String teacherPower;
-	private String shooId;
-	private String headImage;
+	private String userType="" ;
+	private String userName="" ;
+	private String password="";
+	private String teacherName="";
+	private String teacherSex="";
+	private String teacherTel="";
+	private String teacherMobile="";
+	private String teacherPower="";
+	private String shooId="";
+	private String headImage="";
 	public String getUserName() {
 		return userName;
 	}

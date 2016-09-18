@@ -21,17 +21,17 @@ TypeName1 nvarchar(20) NULL,
  */
 public class ShSubject {
 	private int id;
-	private String TypeName1 ;
-	private String  TypeName2;
-	private String  Creater;
-	private String  cType;
-	private String  CreateTime;
-	private String  remark;
-	private String  score1;
-	private String  State;
-	private String  score2;
-	private String  score;
-	private String  Name;
+	private String TypeName1="" ;
+	private String  TypeName2="";
+	private String  Creater="";
+	private String  cType="";
+	private String  CreateTime="";
+	private String  remark="";
+	private String  score1="";
+	private String  State="";
+	private String  score2="";
+	private String  score="";
+	private String  Name="";
 	public int getId() {
 		return id;
 	}

@@ -2,7 +2,7 @@ package com.ld.dbPOJO;
 
 public class ShSchool {
 
-	private String schoolName;
+	private String schoolName="";
 
 	public String getSchoolName() {
 		return schoolName;

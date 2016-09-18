@@ -19,15 +19,15 @@ TeacherID INT NOT NULL PRIMARY KEY,
  */
 public class ShTeacher {
 	private int teacherId;
-	private String userName;
-	private String password;
-	private String teacherName;
-	private String teacherSex;
-	private String teacherTel;
-	private String teacherMobile;
-	private String teacherPower;
-	private String shooId;
-	private String headImage;
+	private String userName="";
+	private String password="";
+	private String teacherName="";
+	private String teacherSex="";
+	private String teacherTel="";
+	private String teacherMobile="";
+	private String teacherPower="";
+	private String shooId="";
+	private String headImage="";
 	public int getTeacherId() {
 		return teacherId;
 	}

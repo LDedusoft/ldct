@@ -18,15 +18,15 @@ package com.ld.dbPOJO;
  */
 public class ShJiankao {
 	private int kaoguanID;
-	private String userName;
-	private String password;
-	private String teacherName;
-	private String teacherSex;
-	private String teacherTel;
-	private String teacherMobile;
-	private String teacherPower;
-	private String shooId;
-	private String headImage;
+	private String userName="";
+	private String password="";;
+	private String teacherName="";
+	private String teacherSex="";
+	private String teacherTel="";
+	private String teacherMobile="";
+	private String teacherPower="";
+	private String shooId="";
+	private String headImage="";
 	
 	public int getKaoguanID() {
 		return kaoguanID;
