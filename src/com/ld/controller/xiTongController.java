@@ -57,6 +57,19 @@ public class xiTongController {
 	}
 	
 	/**
+	 * 获取需要修改的主考
+	 * @param out
+	 * @return json数组
+	 */
+	@RequestMapping(value = "getZhuKaoMessage", method=RequestMethod.POST)
+	public void getZhuKaoMessage(String school,PrintWriter out){
+		String userLiString = "" ;   
+		//TODO 获取用户信息列表
+		userLiString = XiTongService.getZhuKaoMessage(school);
+		out.write(userLiString);
+	}
+	
+	/**
 	 * 编辑主考
 	 * @param params
 	 * @param out

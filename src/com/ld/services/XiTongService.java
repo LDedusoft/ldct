@@ -79,6 +79,30 @@ public class XiTongService {
 	}
 	
 	/**
+	 * 获取要编辑的主考
+	 * @param param
+	 * @return
+	 */
+	public static String getZhuKaoMessage(String teacherId){
+		Object params[] = {teacherId};  
+		Connection conn = null;
+		String sql ="";
+		JSONObject obj = new JSONObject();
+		try {
+			conn =  ConnManager.getConn();
+			sql = "SELECT * FROM SH_Teacher WHERE TEACHERID=?";
+			ShTeacher userInfo =(ShTeacher)new QueryRunner().query(conn, sql, new BeanHandler<ShTeacher>(ShTeacher.class),params);  
+			 if(userInfo==null)return null;
+			obj = JSONObject.fromObject(userInfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}finally{
+			ConnManager.closeConn(conn); //关闭数据库connection
+		}
+		return obj.toString();
+	}
+	/**
 	 * 编辑主考
 	 * @param param
 	 * @return

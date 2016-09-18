@@ -22,7 +22,7 @@ if(session.getAttribute("userInfo")!=null){
 	<script type="text/javascript" src="<%=basePath%>easyui/jquery.easyui.min.js"></script>
 	<script>
 	    var toolbar = [{
-					text:'Add',
+					text:'添加',
 					iconCls:'icon-add',
 					handler:function(){
 						onclick=$('#newZKWindow').window('open');
@@ -30,7 +30,13 @@ if(session.getAttribute("userInfo")!=null){
 		},{
 	    text:'编辑',
 	    iconCls:'icon-cut',
-	    handler:function(){onclick=$('#editZKWindow').window('open');}
+	    handler:function(){
+			var $win;
+			$win = $('#editZKWindow').window({
+			    href:'<%=basePath%>newZhuKao'
+			});
+			$win.window('open');
+		}
 	    },'-',{
 	    text:'删除',
 	    iconCls:'icon-save',
@@ -141,7 +147,7 @@ if(session.getAttribute("userInfo")!=null){
 		function getData(){
 			var rows;	
 			$.ajax({   
-			     url:'<%=basePath%>searchShiTi',   
+			     url:'<%=basePath%>getZhuKao',   
 			     type:'post',   
 			     dataType: 'json',  
 			     data:{
@@ -166,7 +172,7 @@ if(session.getAttribute("userInfo")!=null){
 		
 		function searchBtn(){
 			$.ajax({   
-			     url:'<%=basePath%>searchShiTi',   
+			     url:'<%=basePath%>getZhuKao',   
 			     type:'post',   
 			     dataType: 'json',  
 			     data:{
@@ -208,11 +214,11 @@ if(session.getAttribute("userInfo")!=null){
     ">
     <thead>
     <tr>
-    <th field="inv" width="80">主考编号</th>
-    <th field="date" width="100">主考名称</th>
-    <th field="name" width="80">主考性别</th>
-    <th field="amount" width="80">手机</th>
-    <th field="price" width="80">学校</th>
+    <th field="teacherId" width="80">主考编号</th>
+    <th field="teacherName" width="100">主考名称</th>
+    <th field="teacherSex" width="80">主考性别</th>
+    <th field="teacherTel" width="80">手机</th>
+    <th field="shoolId" width="80">学校</th>
     </tr>
     </thead>
     </table>
@@ -227,7 +233,6 @@ if(session.getAttribute("userInfo")!=null){
 	<div id="editZKWindow" class="easyui-window" title="编辑主考" style="width:600px;height:400px"
     data-options="iconCls:'icon-save',modal:true,minimizable:false,collapsible:false"
     closed="true"
-    href="<%=basePath%>newZhuKao"
     ></div>
     </body>
 </html>
