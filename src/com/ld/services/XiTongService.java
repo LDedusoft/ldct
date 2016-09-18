@@ -65,7 +65,7 @@ public class XiTongService {
 		        int result = new QueryRunner().update(conn, SQL, new Object[] {
 		        		shTeacher.getUserName(),shTeacher.getPassword(),
 		        		shTeacher.getTeacherName(),shTeacher.getTeacherSex(),
-		        		shTeacher.getTeacherTel(),shTeacher.getShoolId(),"'"+shTeacher.getTeacherPower()+"'"
+		        		shTeacher.getTeacherTel(),shTeacher.getShoolId(),shTeacher.getTeacherPower()
 		        		});  
 		        if (0 < result){
 		        	success = true;
