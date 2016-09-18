@@ -29,7 +29,7 @@ public class LoginService {
 				userInfo.setUserType("管理员");
 				userInfo.setHeadImage(tbAdmins.getHeadImage());
 				userInfo.setPassword(tbAdmins.getPassWord());
-				userInfo.setShooId("");
+				userInfo.setShooId(0);
 				userInfo.setTeacherMobile("");
 				userInfo.setTeacherName(tbAdmins.getTeacherName());
 				userInfo.setTeacherPower("");

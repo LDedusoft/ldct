@@ -25,8 +25,9 @@ public class ShJiankao {
 	private String teacherTel="";
 	private String teacherMobile="";
 	private String teacherPower="";
-	private String shooId="";
+	private int shooId=0;
 	private String headImage="";
+
 	
 	public int getKaoguanID() {
 		return kaoguanID;
@@ -76,10 +77,10 @@ public class ShJiankao {
 	public void setTeacherPower(String teacherPower) {
 		this.teacherPower = teacherPower;
 	}
-	public String getShooId() {
+	public int getShooId() {
 		return shooId;
 	}
-	public void setShooId(String shooId) {
+	public void setShooId(int shooId) {
 		this.shooId = shooId;
 	}
 	public String getHeadImage() {
